@@ -21,10 +21,34 @@ const ourType = add<number ,string >(2,'deepanshu')
 
 
 
+function names<T,L> (nam:T, lNam:L){
+    console.log(nam , lNam) 
+}
+
+names('deepanshu','verma')
 
 
+interface Product {
+    name:string,
+    price:number,
+    quantity:number
+}
 
 
+const product1:Product = {
+    name:'Laptop',
+    price:40000,
+    quantity:5
+}
+
+console.log(product1)
+
+function totalPrice (product1:Product){
+    console.log(product1.quantity * product1.price)
+}
+
+
+totalPrice(product1)
 
 
 
