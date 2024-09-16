@@ -15,16 +15,29 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var Player = /** @class */ (function () {
     function Player(height, weight, power) {
-        var _this = this;
         this.height = height;
         this.weight = weight;
         this.power = power;
-        this.getHeight = function () {
-            return _this.height;
-        };
     }
+    Object.defineProperty(Player.prototype, "getHeight", {
+        get: function () {
+            return this.height;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Player.prototype, "changeHeight", {
+        set: function (val) {
+            this.height = val;
+        },
+        enumerable: false,
+        configurable: true
+    });
     return Player;
 }());
+var deep = new Player(100, 150, 23);
+deep.changeHeight = 120;
+console.log(deep.getHeight);
 var Player2 = /** @class */ (function (_super) {
     __extends(Player2, _super);
     function Player2(height, weight, power, special) {
@@ -34,6 +47,6 @@ var Player2 = /** @class */ (function (_super) {
     }
     return Player2;
 }(Player));
-var deep2 = new Player2(100, 150, 23, true);
-console.log(deep2.weight);
-console.log(deep2.special);
+// const deep2 = new Player2(100,150,23,true)
+// console.log(deep2.weight)
+// console.log(deep2.special)
