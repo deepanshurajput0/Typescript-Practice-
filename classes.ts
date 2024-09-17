@@ -24,3 +24,23 @@ class Player2 extends Player{
 // const deep2 = new Player2(100,150,23,true)
 // console.log(deep2.weight)
 // console.log(deep2.special)
+
+
+
+/// classes with interfaces 
+
+
+interface ProductType {
+    name:string,
+    price:number,
+    stock:number,
+}
+
+class Product implements ProductType{
+   private id:string = String(Math.random()*1000)
+  constructor( public name:string, public price:number, public stock:number){
+    
+  }
+}
+
+const product1 = new Product('Macbook',2000,200)

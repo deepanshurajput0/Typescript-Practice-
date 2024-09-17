@@ -24,3 +24,25 @@ function totalPrice(product1) {
     console.log(product1.quantity * product1.price);
 }
 totalPrice(product1);
+var getValue = function (data) {
+    console.log(data);
+};
+var person1 = {
+    name: 'deepanshu',
+    age: 19
+};
+getValue(person1);
+var user2 = {
+    name: 'deepanshu',
+    age: 19,
+    email: 'deepanshu@gmail.com'
+};
+var user = {
+    name: 'shivam',
+    age: 17
+};
+var func = function (n, o) {
+    return { n: n, o: o };
+};
+var ans = func(user, user2);
+console.log(ans);

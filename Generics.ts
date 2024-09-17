@@ -55,6 +55,48 @@ totalPrice(product1)
 
 
 
+// Generics in Details 
 
+type Info={
+    name:string,
+    age:number
+}
 
+const getValue =<T>(data:T,)=>{
+       console.log(data)
+}
 
+const person1:Info ={
+  name:'deepanshu',
+  age:19
+}
+
+getValue<Info>(person1)
+
+type Person2 ={
+    name:string,
+    age:number,
+    email:string
+}
+const user2:Person2 ={
+   name:'deepanshu',
+   age:19,
+   email:'deepanshu@gmail.com'
+}
+
+type Person1 ={
+    name:string,
+    age:number
+}
+const user:Person1 = {
+   name:'shivam',
+   age:17
+}
+
+const func=<T, U extends T>(n:T, o:U)=>{
+    return { n, o }
+}
+
+const ans = func<Person1,Person2>(user,user2)
+
+console.log(ans)
