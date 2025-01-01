@@ -34,3 +34,16 @@ const userz = {
      }
 }
 console.log(userz)
+
+
+/// We can do the same thing by using maps
+
+
+interface userType {
+    name:string,
+    age:number
+}
+
+const users1:Map<string,userType> = new Map()
+users1.set('user@1',{name:'deep',age:20})
+users1.set('user@2',{name:'viv',age:20})
