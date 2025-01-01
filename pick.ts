@@ -35,11 +35,12 @@ interface User {
 
 type UpdatedUser = Pick<User , 'name' | 'email' > 
 
-function updatedUser(user:UpdatedUser){
+type UpdatePropsOptional = Partial<UpdatedUser>
+
+function updatedUser(user:UpdatePropsOptional){
    console.log(`${user.name} + ${user.email}`)
 }
 
 updatedUser({
-    name:'deep',
-    email:'deep@gmail.com'
+    name:'deep'
 })

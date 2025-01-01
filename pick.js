@@ -6,6 +6,5 @@ function updatedUser(user) {
     console.log("".concat(user.name, " + ").concat(user.email));
 }
 updatedUser({
-    name: 'deep',
-    email: 'deep@gmail.com'
+    name: 'deep'
 });
