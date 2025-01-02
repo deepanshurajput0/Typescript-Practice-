@@ -95,4 +95,13 @@ interface user {
 
   // using Map 
 
+  interface Admin {
+    name:string,
+    password:string
+  }
+
+
+  const userMap = new Map<string,Admin>()
+  userMap.set('@user1',{name:'deep',password:"12345"})
+  userMap.set('@user2',{name:'viv',password:"12345"})
 
