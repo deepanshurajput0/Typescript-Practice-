@@ -44,3 +44,55 @@ const bookData:Readonly<Book> = {
 console.log(bookData)
 
 
+/// Yeh hain aam zindagi 
+
+
+
+// interface user {
+//   name:string,
+//   email:string
+// }
+
+
+// type objectType = {
+//     [key:string] : user
+// }
+
+// const userData:objectType ={
+//     '@user1':{
+//         name:'deep',
+//         email:"deep@gmail.com"
+//     },
+//     '@user2':{
+//         name:'viv',
+//         email:'viv@gmail.com'
+//     }
+// }
+
+
+// or ye hai hain mentos zindagi 
+
+
+interface user {
+    name:string,
+    email:string
+  }
+  
+  
+  
+  const userData:Record<string,user> ={
+      '@user1':{
+          name:'deep',
+          email:"deep@gmail.com"
+      },
+      '@user2':{
+          name:'viv',
+          email:'viv@gmail.com'
+      }
+  }
+  
+
+
+  // using Map 
+
+
